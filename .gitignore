@@ -6,3 +6,10 @@ grailsw.bat
 target-eclipse/*
 target/*
 wrapper/*
+web-app/ng/.gitattributes
+web-app/ng/.gitignore
+web-app/ng/.yo-rc.json
+web-app/ng/app/.buildignore
+web-app/ng/app/.htaccess
+web-app/ng/npm-debug.log
+
