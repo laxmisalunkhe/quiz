@@ -10,7 +10,7 @@
             </button>
         </div>
     </div>
-    <timer countdown="6" interval="1000" start-time="6000">
+    <timer countdown="60" interval="1000" max-time-unit="'second'">
         <div>
             <strong>Remaining time for this Question: </strong>
             <span class="text-danger">{{countdown}} second{{secondsS}}</span>
@@ -50,6 +50,6 @@
         <a class="btn btn-lg btn-success" confirmed-click="submit()" 
             ng-confirm-click="Do you want to submit Quiz?">Submit Quiz</a>
         <br>
-        <span class="text-danger"><small>Click these button to Submit your answers.</small></span>
+        <span class="text-danger"><small>Note: Click these button to Submit your answers.</small></span>
     </div>
 </section>

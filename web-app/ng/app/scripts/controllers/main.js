@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the ngApp
  */
-angular.module('quiz').controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope) {
 
     $scope.quizData = {};
     $scope.quizData.questions = [];
@@ -19,12 +19,11 @@ angular.module('quiz').controller('MainCtrl', function ($scope) {
 app.directive('ngConfirmClick', function() {
      return {
          link: function (scope, element, attr) {
-             var msg = attr.ngConfirmClick || "Are you sure?";
+             var msg = attr.ngConfirmClick || 'Are you sure?';
              var clickAction = attr.confirmedClick;
-             element.bind('click',function (event) {
+             element.bind('click',function () {
                      if ( window.confirm(msg) ) {
-                         console.log(clickAction, 'sss')
-                         scope.$eval(clickAction)
+                         scope.$eval(clickAction);
                      }
                  });
              }

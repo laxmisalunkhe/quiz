@@ -7,8 +7,7 @@
  * # QuizCtrl
  * Controller of the ngApp
  */
-angular.module('quiz')
-.controller('QuizCtrl', function ($scope, $interval, $http, $location) {
+app.controller('QuizCtrl', function ($scope, $interval, $http, $location, $timeout) {
 
     $scope.currentQuestionId = 0;
     $scope.timerRunning = true;
@@ -17,6 +16,16 @@ angular.module('quiz')
     $http.get('questions.json').then(function(resp){
         $scope.questions = resp.data;
     });
+
+    $scope.startTimer = function (){
+        $scope.$broadcast('timer-start');
+        $scope.timerRunning = true;
+    };
+
+    $scope.stopTimer = function (){
+        $scope.$broadcast('timer-stop');
+        $scope.timerRunning = false;
+    };
 
     $scope.changeQuestion = function(order) {
         if (order === 'prev') {
@@ -32,10 +41,13 @@ angular.module('quiz')
                 $scope.currentQuestionId = 0;
             }
         }
+        if ($scope.questions[$scope.currentQuestionId].isExpired === true) {
+            $scope.changeQuestion(order);
+        }
     };
 
     $scope.submit = function() {
-        var totalScore = 0
+        var totalScore = 0;
         var totalAnsweredQuestion = 0;
         // Calculating total answered question and total score
         angular.forEach($scope.questions, function(question) {
@@ -60,15 +72,13 @@ angular.module('quiz')
     };
 
     $scope.questionCallbackTimer = function() {
-        console.log('questionCallbackTimer')
+        $scope.stopTimer();
+        $scope.startTimer();
         $scope.changeQuestion('next');
-        $scope.$broadcast('timer-resume');
     };
 
     $scope.quizCallbackTimer = function() {
-        $scope.stopTimer();
-        $scope.startTimer();
-        console.log('quizCallbackTimer')
+        $scope.submit();
     };
 
     // Added Interval for performing timeout validation for each question
