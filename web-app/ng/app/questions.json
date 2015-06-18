@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "question": "The following countries have a border with India to the North West: ", 
+        "options": [
+            {"key": "a", "value": "Afganistan"},
+            {"key": "b", "value": "Shrilanka"},
+            {"key": "c", "value": "China"},
+            {"key": "d", "value": "Bhutan"}
+        ],
+        "answer": "a"
+    },
+    {
+        "id": 2,
+        "question": "The population of India according to the Census of 2001 is: ", 
+        "options": [
+            {"key": "a", "value": "9,038 Million"},
+            {"key": "b", "value": "1,028 Million"},
+            {"key": "c", "value": "1,052 Million"},
+            {"key": "d", "value": "1.074 Million"}
+        ],
+        "answer": "b"
+    },
+    {
+        "id": 3,
+        "question": "The contribution of agriculture to the GDP of India is roughly: ", 
+        "options": [
+            {"key": "a", "value": "30%"},
+            {"key": "b", "value": "33%"},
+            {"key": "c", "value": "40%"},
+            {"key": "d", "value": "45%"}
+        ],
+        "answer": "b"
+    },
+    {
+        "id": 4,
+        "question": "The following is a true statement in 2011: ", 
+        "options": [
+            {"key": "a", "value": "India comprises of  28 states and 6 Union Territories"},
+            {"key": "b", "value": "India comprises of 28 states and 5 Union Territories"},
+            {"key": "c", "value": "India comprises of 28 states and 7 Union Territories"},
+            {"key": "d", "value": "Indian comprises of 28 states and 8 Union Territories"}
+        ],
+        "answer": "c"
+    },
+    {
+        "id": 5,
+        "question": "The constitution of India was adopted on : ", 
+        "options": [
+            {"key": "a", "value": "1947"},
+            {"key": "b", "value": "1948"},
+            {"key": "c", "value": "1949"},
+            {"key": "d", "value": "1950"}
+        ],
+        "answer": "c"
+    },
+    {
+        "id": 6,
+        "question": "The National Fruit of India is the ", 
+        "options": [
+            {"key": "a", "value": "Mango"},
+            {"key": "b", "value": "Lotus Fruit"},
+            {"key": "c", "value": "Gauva"},
+            {"key": "d", "value": "Papaya"}
+        ],
+        "answer": "a"
+    },
+    {
+        "id": 7,
+        "question": "The National Tree of India is the: ", 
+        "options": [
+            {"key": "a", "value": "Neem Tree"},
+            {"key": "b", "value": "Lotus Tree"},
+            {"key": "c", "value": "Banyan Tree"},
+            {"key": "d", "value": "Mango Tree"}
+        ],
+        "answer": "c"
+    },
+    {
+        "id": 8,
+        "question": "The National Animal of India is the : ", 
+        "options": [
+            {"key": "a", "value": "Tiger"},
+            {"key": "b", "value": "Lion"},
+            {"key": "c", "value": "Peacock"},
+            {"key": "d", "value": "Leopard"}
+        ],
+        "answer": "a"
+    },
+    {
+        "id": 9,
+        "question": "The song Vande Mantaram was composed by: ", 
+        "options": [
+            {"key": "a", "value": "Rabindranath Tagore"},
+            {"key": "b", "value": "Bankimchandra Chatterji"}
+        ],
+        "answer": "b"
+    },
+    {
+        "id": 10,
+        "question": "The song Jana-gana-Mana was originally composed in: ", 
+        "options": [
+            {"key": "a", "value": "Bengali"},
+            {"key": "b", "value": "Hindi"},
+            {"key": "c", "value": "Urdu"},
+            {"key": "d", "value": "Sanskrit"}
+        ],
+        "answer": "a"
+    }
+]

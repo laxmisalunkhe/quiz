@@ -7,11 +7,11 @@
  * # AboutCtrl
  * Controller of the ngApp
  */
-angular.module('ngApp')
-    .controller('AboutCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
-    });
+angular.module('quiz')
+.controller('AboutCtrl', function ($scope) {
+    $scope.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma'
+    ];
+});

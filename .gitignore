@@ -12,4 +12,5 @@ web-app/ng/.yo-rc.json
 web-app/ng/app/.buildignore
 web-app/ng/app/.htaccess
 web-app/ng/npm-debug.log
-
+web-app/bower_components/
+/bin/

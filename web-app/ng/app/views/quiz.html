@@ -1,0 +1,55 @@
+<section ng-controller="QuizCtrl">
+    <div class="row">
+        <div class="col-lg-12 text-right">
+            <button type="button" class="btn btn-lg btn-danger" disabled="disabled">
+                <timer countdown="600" max-time-unit="'minute'" interval="1000">
+                    <div>
+                        <span>Time left 00:{{mminutes}}:{{sseconds}}</span>
+                    </div>
+                </timer>
+            </button>
+        </div>
+    </div>
+    <timer countdown="6" interval="1000" start-time="6000">
+        <div>
+            <strong>Remaining time for this Question: </strong>
+            <span class="text-danger">{{countdown}} second{{secondsS}}</span>
+        </div>
+    </timer>
+    <div class="well">
+        <div>
+            <p>
+                <strong>Q{{questions[currentQuestionId].id}}. {{questions[currentQuestionId].question}}</strong>
+            </p>
+            <ul>
+                <li class="list-unstyled" ng-repeat="option in questions[currentQuestionId].options">
+                    <label>
+                        <input type="radio" ng-model="questions[currentQuestionId].userAnswer" 
+                            ng-value="option.key"> {{option.value}}
+                    </label>
+                    <br>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul class="pager">
+                <li>
+                    <a ng-click="changeQuestion('prev')" href="">
+                        Previous
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="changeQuestion('next')" href="">
+                        Next
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="end-quiz">
+        <a class="btn btn-lg btn-success" confirmed-click="submit()" 
+            ng-confirm-click="Do you want to submit Quiz?">Submit Quiz</a>
+        <br>
+        <span class="text-danger"><small>Click these button to Submit your answers.</small></span>
+    </div>
+</section>
